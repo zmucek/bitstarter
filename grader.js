@@ -46,7 +46,7 @@ if(require.main == module) {
        .option('-u, --url <html_file>', 'url to index.html')
        .parse(process.argv);
     restler.get(program.url).on('complete', function(result) {
-    console.log(result);
+ 
     var checkJson = checkHtmlFile(result, program.checks);
     var outJson = JSON.stringify(checkJson, null, 4);
     console.log(outJson);
